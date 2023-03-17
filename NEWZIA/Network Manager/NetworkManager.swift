@@ -23,7 +23,7 @@ class NetworkManager {
     
     static let instance = NetworkManager()
     
-    func request<T: Decodable>(_ strURL: String, parameters: [String : Any]?, method: HTTPMethod, type: T.Type, viewController: UIViewController, api_response: @escaping (BaseModel?) -> Void, hasLoading: Bool = true){
+    func request<T: Decodable>(_ strURL: String, parameters: [String : Any]?, method: HTTPMethod, type: T.Type, viewController: UIViewController, hasLoading: Bool = true, api_response: @escaping (BaseModel<T>?) -> Void){
         
         
         if hasLoading {
@@ -48,7 +48,7 @@ class NetworkManager {
         print("Parameters:", parameters)
 #endif
                 
-        AF.request(strURL, method: method, parameters: parameters, headers: headers).responseDecodable(of: BaseModel.self) { (response) -> Void in
+        AF.request(strURL, method: method, parameters: parameters, headers: headers).responseDecodable(of:  BaseModel<T>.self) { (response) -> Void in
             //Do what ever you want to do with response
 #if DEBUG
             print(response.debugDescription)
@@ -58,15 +58,12 @@ class NetworkManager {
             case .success:
                 let resJson = response.data
                 do {
-                    let model = try JSONDecoder().decode(BaseModel.self, from: resJson!)
+                    let model = try JSONDecoder().decode(BaseModel<T>.self, from: resJson!)
                     api_response(model)
                     guard let statusCode = model.status, let responseStatusCode = ResponseStatusCode(rawValue: statusCode) else { return }
                     switch responseStatusCode {
                     case .success:
                         api_response(model)
-                        if let totalResults = model.totalResults {
-                            viewController.swiftMessage(title: "success", body: "The total number of results \(totalResults)", color: .success, layout: .messageView , style: .top)
-                        }
                         
                     case .error:
                         viewController.swiftMessage(title: "\(statusCode)", body: model.message ?? "", color: .error, layout: .messageView, style: .top)

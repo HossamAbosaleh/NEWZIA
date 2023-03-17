@@ -17,10 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if #available(iOS 16, *) {
             let navigationBarAppearance = UINavigationBarAppearance()
             navigationBarAppearance.configureWithTransparentBackground()
-            navigationBarAppearance.backgroundColor = UIColor.appColor(Constants.AssetsColor.BackgroundColor)
-            navigationBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-            navigationBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-            UINavigationBar.appearance().tintColor = UIColor.white
+            navigationBarAppearance.backgroundColor = .clear
+            navigationBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.appColor(Constants.AssetsColor.SecondaryColor) ?? .black]
+            navigationBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.appColor(Constants.AssetsColor.SecondaryColor) ?? .black ]
+            UINavigationBar.appearance().tintColor = UIColor.appColor(Constants.AssetsColor.SecondaryColor)
             UINavigationBar.appearance().standardAppearance = navigationBarAppearance
             UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
         }
@@ -29,8 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if #available(iOS 16, *) {
             let tabBarAppearance = UITabBarAppearance()
             tabBarAppearance.configureWithTransparentBackground()
-            tabBarAppearance.backgroundColor = .black
-            UITabBar.appearance().tintColor = UIColor.white
+            tabBarAppearance.backgroundColor = .white
+            UITabBar.appearance().tintColor = UIColor.appColor(Constants.AssetsColor.PrimaryColor)
             UITabBar.appearance().standardAppearance = tabBarAppearance
             // Only run on Xcode version >= 13
             #if swift(>=5.5)

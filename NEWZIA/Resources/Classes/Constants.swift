@@ -13,6 +13,7 @@ class Constants {
         case BackgroundColor
         case PrimaryColor
         case SecondaryColor
+        case LynchColor
     }
     
     enum StoryBoardNames {
@@ -21,8 +22,9 @@ class Constants {
     }
     
     enum VCIdentifier {
+        static let tabbar = "TabBar"
         static let homeVC = "HomeVC"
-        static let detailsArticleVC = "DetailsArticleVC"
+        static let detailsArticleVC = "DetailsArticlesVC"
+        static let webKitVC = "WebKitVC"
     }
-    
 }

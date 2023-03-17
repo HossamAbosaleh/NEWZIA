@@ -5,13 +5,13 @@
 //  Created by Abo Saleh on 17/03/2023.
 //
 
-struct BaseModel: Decodable {
+struct BaseModel<T: Decodable>: Decodable {
     
     let status : String?
     let code : String?
     let message : String?
     let totalResults : Int?
-    let articles : [ArticlesModel]?
+    let data : T?
 
     enum CodingKeys: String, CodingKey {
 
@@ -19,7 +19,7 @@ struct BaseModel: Decodable {
         case code = "code"
         case message = "message"
         case totalResults = "totalResults"
-        case articles = "articles"
+        case data = "articles"
     }
 
 }

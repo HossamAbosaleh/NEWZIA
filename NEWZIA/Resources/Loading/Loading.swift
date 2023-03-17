@@ -12,8 +12,8 @@ class Loading: NSObject {
     
     private var overlayView: UIView!
     private var animationView: LottieAnimationView?
-    private let width = 136
-    private let height = 136
+    private let width = 80
+    private let height = 80
     
     func startProgress(_ viewController: UIViewController) {
         finishProgress(viewController)
@@ -21,7 +21,7 @@ class Loading: NSObject {
         overlayView.tag = 24111994
         overlayView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         viewController.view.addSubview(overlayView)
-        animationView = .init(name: "loading")
+        animationView = .init(name: "Loading")
         animationView?.backgroundColor = .white
         animationView?.cornerRadius = 10
         animationView?.frame = CGRect(x: 0, y: 0, width: width, height: height)
