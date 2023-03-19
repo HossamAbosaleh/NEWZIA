@@ -10,11 +10,7 @@ import UIKit
 
 
 extension String {
-    func widthOfString(usingFont font: UIFont) -> CGFloat {
-        let fontAttributes = [NSAttributedString.Key.font: font]
-        let size = self.size(withAttributes: fontAttributes)
-        return size.width
-    }
+
     var htmlToAttributedString: NSAttributedString? {
         guard let data = data(using: .utf8) else { return nil }
         do {
@@ -23,6 +19,7 @@ extension String {
             return nil
         }
     }
+    
     var htmlToString: String {
         return htmlToAttributedString?.string ?? ""
     }
@@ -55,19 +52,19 @@ extension UIWindow {
 }
 
 
-extension Optional where Wrapped == String {
+extension String? {
     var orEmpty: String {
         self ?? ""
     }
 }
 
-extension Optional where Wrapped == Double {
+extension Double? {
     var orEmpty: Any {
         self ?? 0.0
     }
 }
 
-extension Optional where Wrapped == Int {
+extension Int? {
     var orEmpty: Any {
         self ?? 0
     }

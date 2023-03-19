@@ -7,6 +7,7 @@
 
 import UIKit
 import SDWebImage
+import SafariServices
 
 class DetailsArticlesVC: UIViewController {
 
@@ -16,6 +17,7 @@ class DetailsArticlesVC: UIViewController {
     @IBOutlet weak var titleArticleLabel: UILabel!
     @IBOutlet weak var sourceArticleLabel: UILabel!
     @IBOutlet weak var descriptionArticleLabel: UILabel!
+    @IBOutlet weak var contentArticleLabel: UILabel!
     @IBOutlet weak var authorArticleLabel: UILabel!
     @IBOutlet weak var timeArticleLabel: UILabel!
     
@@ -41,9 +43,30 @@ class DetailsArticlesVC: UIViewController {
         titleArticleLabel.text = item.title.orEmpty
         sourceArticleLabel.text = source.name.orEmpty
         descriptionArticleLabel.text = item.description.orEmpty
+        contentArticleLabel.text = item.content.orEmpty.htmlToString
         authorArticleLabel.text = item.author.orEmpty
         timeArticleLabel.text = item.publishedAt.orEmpty
         
+    }
+    
+    @IBAction func articleWebSiteAction(_ sender: UIButton) {
+        
+        guard let articleItem else { return }
+        
+        let urlString = articleItem.url.orEmpty
+
+        if let url = URL(string: urlString) {
+               let config = SFSafariViewController.Configuration()
+               config.entersReaderIfAvailable = true
+               let vc = SFSafariViewController(url: url, configuration: config)
+               present(vc, animated: true)
+           }
+    }
+}
+
+extension DetailsArticlesVC: SFSafariViewControllerDelegate {
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        dismiss(animated: true)
     }
 }
 

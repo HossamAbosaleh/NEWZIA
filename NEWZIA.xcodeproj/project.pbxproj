@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E125FC829C67ABE003E0EE7 /* LoadingTViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E125FC629C67ABE003E0EE7 /* LoadingTViewCell.swift */; };
+		3E125FC929C67ABE003E0EE7 /* LoadingTViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E125FC729C67ABE003E0EE7 /* LoadingTViewCell.xib */; };
+		3E125FCC29C67B3B003E0EE7 /* LoadingCViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E125FCA29C67B3B003E0EE7 /* LoadingCViewCell.swift */; };
+		3E125FCD29C67B3B003E0EE7 /* LoadingCViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E125FCB29C67B3B003E0EE7 /* LoadingCViewCell.xib */; };
 		3E1A6F7929C4F2AD0094CF0D /* ArticlesTViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A6F7729C4F2AD0094CF0D /* ArticlesTViewCell.swift */; };
 		3E1A6F7A29C4F2AD0094CF0D /* ArticlesTViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E1A6F7829C4F2AD0094CF0D /* ArticlesTViewCell.xib */; };
 		3E3F707F29C3F3110030F7FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F707E29C3F3110030F7FB /* AppDelegate.swift */; };
@@ -47,6 +51,10 @@
 
 /* Begin PBXFileReference section */
 		20F002DB7B9FF903519907EE /* Pods-NEWZIA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NEWZIA.debug.xcconfig"; path = "Target Support Files/Pods-NEWZIA/Pods-NEWZIA.debug.xcconfig"; sourceTree = "<group>"; };
+		3E125FC629C67ABE003E0EE7 /* LoadingTViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTViewCell.swift; sourceTree = "<group>"; };
+		3E125FC729C67ABE003E0EE7 /* LoadingTViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingTViewCell.xib; sourceTree = "<group>"; };
+		3E125FCA29C67B3B003E0EE7 /* LoadingCViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCViewCell.swift; sourceTree = "<group>"; };
+		3E125FCB29C67B3B003E0EE7 /* LoadingCViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCViewCell.xib; sourceTree = "<group>"; };
 		3E1A6F7729C4F2AD0094CF0D /* ArticlesTViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesTViewCell.swift; sourceTree = "<group>"; };
 		3E1A6F7829C4F2AD0094CF0D /* ArticlesTViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticlesTViewCell.xib; sourceTree = "<group>"; };
 		3E3F707B29C3F3110030F7FB /* NEWZIA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NEWZIA.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,9 +117,28 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		3E125FC429C67A7F003E0EE7 /* LoadingTViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3E125FC629C67ABE003E0EE7 /* LoadingTViewCell.swift */,
+				3E125FC729C67ABE003E0EE7 /* LoadingTViewCell.xib */,
+			);
+			path = LoadingTViewCell;
+			sourceTree = "<group>";
+		};
+		3E125FC529C67A92003E0EE7 /* LoadingCViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3E125FCA29C67B3B003E0EE7 /* LoadingCViewCell.swift */,
+				3E125FCB29C67B3B003E0EE7 /* LoadingCViewCell.xib */,
+			);
+			path = LoadingCViewCell;
+			sourceTree = "<group>";
+		};
 		3E1A6F7629C4F28C0094CF0D /* ArticlesTViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				3E125FC429C67A7F003E0EE7 /* LoadingTViewCell */,
 				3E1A6F7729C4F2AD0094CF0D /* ArticlesTViewCell.swift */,
 				3E1A6F7829C4F2AD0094CF0D /* ArticlesTViewCell.xib */,
 			);
@@ -372,6 +399,7 @@
 		3EDE50C129C4491D00CE5D65 /* HeadlinesCViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				3E125FC529C67A92003E0EE7 /* LoadingCViewCell */,
 				3EDE50C629C4496700CE5D65 /* HeadlinesCViewCell.swift */,
 				3EDE50C729C4496700CE5D65 /* HeadlinesCViewCell.xib */,
 			);
@@ -448,6 +476,7 @@
 			files = (
 				3E3F708B29C3F3130030F7FB /* LaunchScreen.storyboard in Resources */,
 				3E1A6F7A29C4F2AD0094CF0D /* ArticlesTViewCell.xib in Resources */,
+				3E125FC929C67ABE003E0EE7 /* LoadingTViewCell.xib in Resources */,
 				3E3F70C829C407D60030F7FB /* CheckConnectionVC.xib in Resources */,
 				3E3F708829C3F3130030F7FB /* Assets.xcassets in Resources */,
 				3EC49C3329C42F2F00D1DCDC /* Home.storyboard in Resources */,
@@ -456,6 +485,7 @@
 				3E3F708629C3F3110030F7FB /* Main.storyboard in Resources */,
 				3E3F70D129C40C260030F7FB /* no_connection.json in Resources */,
 				3EDE50C929C4496700CE5D65 /* HeadlinesCViewCell.xib in Resources */,
+				3E125FCD29C67B3B003E0EE7 /* LoadingCViewCell.xib in Resources */,
 				3E3F70D329C40C430030F7FB /* empty_data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,9 +550,11 @@
 				3E3F70AB29C400200030F7FB /* BaseModel.swift in Sources */,
 				3E3F70BB29C401810030F7FB /* Any+Extensions.swift in Sources */,
 				3EA092E629C4A51B0067DC78 /* HomeVC.swift in Sources */,
+				3E125FCC29C67B3B003E0EE7 /* LoadingCViewCell.swift in Sources */,
 				3E3F70BE29C407330030F7FB /* Loading.swift in Sources */,
 				3EDE50C829C4496700CE5D65 /* HeadlinesCViewCell.swift in Sources */,
 				3E1A6F7929C4F2AD0094CF0D /* ArticlesTViewCell.swift in Sources */,
+				3E125FC829C67ABE003E0EE7 /* LoadingTViewCell.swift in Sources */,
 				3E3F70A729C3FFFE0030F7FB /* EndPoints.swift in Sources */,
 				3E3F70C729C407D60030F7FB /* CheckConnectionVC.swift in Sources */,
 				3E3F70B529C4014F0030F7FB /* UIViewController+Extensions.swift in Sources */,

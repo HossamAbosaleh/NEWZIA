@@ -134,6 +134,13 @@
                                             <constraint firstAttribute="trailing" secondItem="X1r-2l-kT3" secondAttribute="trailing" constant="8" id="QjE-xM-tKL"/>
                                             <constraint firstItem="X1r-2l-kT3" firstAttribute="top" secondItem="gMA-nK-49C" secondAttribute="top" constant="8" id="rJf-FH-zfX"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topRight" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topLeft" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                             </stackView>

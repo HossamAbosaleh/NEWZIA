@@ -31,7 +31,7 @@ class CheckConnectionVC: UIViewController {
 
     // MARK: - IBAction
     @IBAction func tryAgainAction(_ sender: Any) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GetStartedVC")
+        let vc = UIStoryboard(name: Constants.StoryBoardNames.main, bundle: nil).instantiateViewController(withIdentifier: Constants.VCIdentifier.getStartedVC)
         window?.rootViewController = vc
         window?.makeKeyAndVisible()
     }

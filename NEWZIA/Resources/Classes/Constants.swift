@@ -26,5 +26,7 @@ class Constants {
         static let homeVC = "HomeVC"
         static let detailsArticleVC = "DetailsArticlesVC"
         static let webKitVC = "WebKitVC"
+        static let getStartedVC = "GetStartedVC"
+        
     }
 }
